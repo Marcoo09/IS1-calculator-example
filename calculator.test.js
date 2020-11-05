@@ -2,11 +2,15 @@ const { sum, div } = require("./calculator");
 const { Exceptions } = require("./exceptions");
 
 describe("should test sum method", () => {
+  it("should test sum method returning a defined value", () => {
+    const valueA = 5;
+    const valueB = 3;
+    expect(sum(valueA, valueB)).toBeDefined();
+  });
   it("should test sum method returning 8", () => {
     const valueA = 5;
     const valueB = 3;
     expect(sum(valueA, valueB)).toBe(8);
-    expect(sum(valueA, valueB)).toBeDefined();
   });
 });
 
